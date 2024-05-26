@@ -191,16 +191,11 @@ ALTER TABLE `khosach`
 
 INSERT INTO `khosach` (`maSach`, `soLuong`) VALUES
 ('S000001', 5),
-('S000001', 5),
-('S000002', 5),
 ('S000002', 5),
 ('S000003', 5),
 ('S000003', 5),
 ('S000004', 5),
-('S000004', 5),
 ('S000005', 20),
-('S000005', 20),
-('S000006', 20),
 ('S000006', 20);
 
 --
@@ -212,14 +207,14 @@ ALTER TABLE `muonsach`
   ADD KEY `FK_maThe_2` (`maThe`);
 
 INSERT INTO `muonsach` (`maMuonSach`, `maThe`, `IDSach`, `thoiDiemMuon`, `thoiGianMuon`) VALUES
-('M000001', 'T000001', 'IDS000001', '2020-01-10', 4),
-('M000002', 'T000002', 'IDS000004', '2020-01-25', 17),
-('M000003', 'T000003', 'IDS000008', '2020-02-04', 7),
-('M000004', 'T000003', 'IDS000012', '2020-02-12', 20),
-('M000005', 'T000004', 'IDS000013', '2020-02-05', 15),
-('M000006', 'T000004', 'IDS000019', '2020-02-05', 15),
-('M000007', 'T000005', 'IDS000023', '2020-02-03', 12),
-('M000008', 'T000006', 'IDS000030', '2020-02-08', 8);
+('M000001', 'T000001', 'IDS000001', '2024-01-10', 4),
+('M000002', 'T000002', 'IDS000004', '2024-01-25', 17),
+('M000003', 'T000003', 'IDS000008', '2024-02-04', 7),
+('M000004', 'T000003', 'IDS000012', '2024-02-12', 20),
+('M000005', 'T000004', 'IDS000013', '2024-02-05', 15),
+('M000006', 'T000004', 'IDS000019', '2024-02-05', 15),
+('M000007', 'T000005', 'IDS000023', '2024-02-03', 12),
+('M000008', 'T000006', 'IDS000030', '2024-02-08', 8);
 
 --
 -- Indexes for table `nguoiquanly`
@@ -240,7 +235,7 @@ ALTER TABLE `sach`
 INSERT INTO `sach` (`maSach`, `tenSach`, `tenTacGia`, `tenNXB`, `namXB`, `theLoai`, `ngonNgu`, `tomTatNoiDung`, `giaTien`, `soTrang`) VALUES
 ('S000001', 'Tập Tục Đời Người', 'Phan Cẩm Thượng', 'Nhà Xuất Bản Hội Nhà Văn', 2017, 'Sách Văn Hóa', 'Tiếng Việt', '“Bạn đang cầm trên tay cuốn thứ hai trong một bộ sách của Phan Cẩm Thượng […] gồm bốn cuốn, sẽ hoàn thành trong 4 đến 5 năm nữa. Một bộ sử Việt Nam. Nhưng cần nói rõ: không phải lịch sử nước Việt với tư cách một quốc gia, mà là lịch sử người Việt Nam trong cuộc sống làm người hằng ngày của họ. Phan Cẩm Thượng không viết về các triều đại hưng suy, các cuộc chiến tranh thắng thua khốc liệt, các biến cố chính trị được coi là trọng đại … như ta thường gặp trong những bộ quốc sử nghiêm trang. Ở đây ta gặp một cái khác, nhỏ nhoi hơn, thường nhật và gần gũi hơn (nhưng kỳ vậy, lại ít được biết đến hơn): những con người. Con người Việt Nam. Phan Cẩm Thượng cho thấy còn có một lịch sử khác nữa như vậy của đất nước này mà ta chưa thật biết, song lại cũng quan trọng không kém, nếu không hơn. Vâng, có thể còn hơn, bởi vì con người phải sống như thế này, làm những cái này trước, rồi mới có thể làm những cái được coi là trọng đại kia. Mới có thể làm nên Lịch sử ‘lớn’. Hoặc nói cho cùng, những cái to lớn, trọng đại kia, theo cách nào đó rất có thể do chính những cái này chi phối, thậm chí đến quyết định. Vì nó có trước. Nó là cái nền. Nó bền bỉ và lâu dài hơn các triều đại và các chế độ.”', 189000, 611),
 ('S000002', 'Việt Nam Phong Tục', 'Phan Kế Bính', 'Nhà Xuất Bản Hồng Đức', 2019, 'Sách Văn Hóa', 'Tiếng Việt', 'Từ Phong tục trong gia tộc, Phong tục xóm làng (hương đảng) đến các phong tục ngoài xã hội, VIỆT NAM PHONG TỤC của học giả PHAN KẾ BÍNH là một bộ biên khảo tương đối đầy đủ về các phong tục tập quán cũ của nước Việt. Là một nhà nho uyên bác mang tư tưởng tân tiến, tác giả không chỉ mô tả từng tập tục, mà còn về gốc tích, nguyên ủy cái tục ấy, nhìn nhận, đánh giá để xem nó hay hay dở, từ đó \"xét điều gì quá tệ mà bỏ bớt đi, rồi lâu lâu mới đem cái tục hay mà bổ hết cho cái tục dở. Còn tục gì hay mà là quốc túy của ta thì cứ giữ lấy\". Đến nay, tập sách gần một trăm năm tuổi này vẫn là một trong những công trình khảo cứu có giá trị bậc nhất về các phong tục tập quán trên đất nước ta và nhiều vấn đề được PHAN KẾ BÍNH nhắc tới vẫn nóng hổi tính thời đại.', 90000, 306),
-('S000003', ' Văn Hóa Tín Ngưỡng Việt Nam', 'Nguyễn Hạnh', 'Nhà Xuất Bản Trẻ', 2020, 'Sách Văn Hóa', 'Tiếng Việt', 'Tác phẩm Văn Hóa Tín Ngưỡng Việt Nam của tác giả Nguyễn Hạnh là tác phẩm biên khảo về tín ngưỡng của người Việt khởi từ thời dựng nước với khái niệm thờ: Trời, đất, tổ tiên. Những niềm tin dân gian của ông bà ta xưa vẫn còn lưu truyền đến ngày nay thông qua kho tàng ca dao.Tiếp đến là sự giao thoa văn hóa với 4 tôn giáo lớn ở Việt Nam là Nho, Phật, Lão, Công Giáo. Chính sự giao thoa giữa tín ngưỡng dân gian Việt Nam và 4 tôn giáo lớn này đã hình thành nên nhiều tôn giáo bản địa như Cao Đài, Hòa Hảo, Hòa Đồng Tôn Giáo. Sự giao thoa, tiếp thu và chọn lọc đó đã làm nên một đặc sắc trong chiều kích tâm linh đó là các tôn giáo du nhập phải được điều chỉnh và chứa đựng được yếu tố tín ngưỡng của người Việt. Chính những ảnh hưởng giao thoa này góp phần tạo nên bản sắc văn hóa, tín ngưỡng của người Việt xuyên suốt từ thuở dựng nước đến nay. Tác phẩm Văn Hóa Tín Ngưỡng Việt Nam sẽ góp phần làm phong phú thêm Tủ sách Triết học phương Đông của NXB Trẻ và là quyển sách cần thiết cho độc giả tìm hiểu về cội nguồn tín ngưỡng của người Việt.', 100000, 232);
+('S000003', ' Văn Hóa Tín Ngưỡng Việt Nam', 'Nguyễn Hạnh', 'Nhà Xuất Bản Trẻ', 2024, 'Sách Văn Hóa', 'Tiếng Việt', 'Tác phẩm Văn Hóa Tín Ngưỡng Việt Nam của tác giả Nguyễn Hạnh là tác phẩm biên khảo về tín ngưỡng của người Việt khởi từ thời dựng nước với khái niệm thờ: Trời, đất, tổ tiên. Những niềm tin dân gian của ông bà ta xưa vẫn còn lưu truyền đến ngày nay thông qua kho tàng ca dao.Tiếp đến là sự giao thoa văn hóa với 4 tôn giáo lớn ở Việt Nam là Nho, Phật, Lão, Công Giáo. Chính sự giao thoa giữa tín ngưỡng dân gian Việt Nam và 4 tôn giáo lớn này đã hình thành nên nhiều tôn giáo bản địa như Cao Đài, Hòa Hảo, Hòa Đồng Tôn Giáo. Sự giao thoa, tiếp thu và chọn lọc đó đã làm nên một đặc sắc trong chiều kích tâm linh đó là các tôn giáo du nhập phải được điều chỉnh và chứa đựng được yếu tố tín ngưỡng của người Việt. Chính những ảnh hưởng giao thoa này góp phần tạo nên bản sắc văn hóa, tín ngưỡng của người Việt xuyên suốt từ thuở dựng nước đến nay. Tác phẩm Văn Hóa Tín Ngưỡng Việt Nam sẽ góp phần làm phong phú thêm Tủ sách Triết học phương Đông của NXB Trẻ và là quyển sách cần thiết cho độc giả tìm hiểu về cội nguồn tín ngưỡng của người Việt.', 100000, 232);
 
 --
 -- Indexes for table `the`
@@ -250,18 +245,18 @@ ALTER TABLE `the`
   ADD KEY `FK_maKhachHang` (`maKhachhang`);
 
 INSERT INTO `the` (`maThe`, `maKhachhang`, `ngayCap`, `ngayHetHan`) VALUES
-('T000001', 'KH000001', '2020-01-08', '2021-01-08'),
-('T000002', 'KH000002', '2020-01-15', '2021-01-15'),
-('T000003', 'KH000003', '2020-01-21', '2021-01-21'),
-('T000004', 'KH000004', '2020-01-30', '2021-01-30'),
-('T000005', 'KH000005', '2020-02-02', '2021-02-02'),
-('T000006', 'KH000006', '2020-02-06', '2021-02-06'),
-('T000007', 'KH000007', '2020-02-27', '2021-02-27'),
-('T000008', 'KH000008', '2020-03-04', '2021-03-04'),
-('T000009', 'KH000009', '2020-03-14', '2021-03-14'),
-('T000010', 'KH000010', '2020-03-20', '2021-03-20'),
-('T000011', 'KH000011', '2020-03-29', '2021-03-29'),
-('T000012', 'KH000012', '2020-04-14', '2021-04-14');
+('T000001', 'KH000001', '2024-01-08', '2024-01-08'),
+('T000002', 'KH000002', '2024-01-15', '2024-01-15'),
+('T000003', 'KH000003', '2024-01-21', '2024-01-21'),
+('T000004', 'KH000004', '2024-01-30', '2024-01-30'),
+('T000005', 'KH000005', '2024-02-02', '2024-02-02'),
+('T000006', 'KH000006', '2024-02-06', '2024-02-06'),
+('T000007', 'KH000007', '2024-02-27', '2024-02-27'),
+('T000008', 'KH000008', '2024-03-04', '2024-03-04'),
+('T000009', 'KH000009', '2024-03-14', '2024-03-14'),
+('T000010', 'KH000010', '2024-03-20', '2024-03-20'),
+('T000011', 'KH000011', '2024-03-29', '2024-03-29'),
+('T000012', 'KH000012', '2024-04-14', '2024-04-14');
 
 --
 -- Indexes for table `trasach`
@@ -270,25 +265,16 @@ ALTER TABLE `trasach`
   ADD KEY `FK_maMuonsach` (`maMuonSach`);
 
 INSERT INTO `trasach` (`maMuonSach`, `thoiDiemTra`) VALUES
-('M000001', '2020-01-14'),
-('M000001', '2020-01-14'),
-('M000002', '2020-02-11'),
-('M000002', '2020-02-11'),
-('M000003', '2020-02-11'),
-('M000003', '2020-02-11'),
-('M000004', '2020-03-03'),
-('M000004', '2020-03-03'),
-('M000005', '2020-02-20'),
-('M000005', '2020-02-20'),
-('M000006', '2020-02-20'),
-('M000006', '2020-02-20'),
-('M000007', '2020-02-15'),
-('M000007', '2020-02-15'),
-('M000008', '2020-02-16'),
-('M000008', '2020-02-16'),
-('M000009', '2020-02-16'),
-('M000009', '2020-02-16'),
-('M000010', '2020-03-02');
+('M000001', '2024-01-14'),
+('M000002', '2024-02-11'),
+('M000003', '2024-02-11'),
+('M000004', '2024-03-03'),
+('M000005', '2024-02-20'),
+('M000006', '2024-02-20'),
+('M000007', '2024-02-15'),
+('M000008', '2024-02-16'),
+('M000009', '2024-02-16'),
+('M000010', '2024-03-02');
 --
 -- Constraints for dumped tables
 --
