@@ -213,13 +213,6 @@ public class QLAdminBUS {
         return this.mod(admin);
     }
     
-    public Boolean mod(String tkAdmin, String password, String RFID_code){
-        QLAdminDTO admin = new QLAdminDTO(tkAdmin, password, RFID_code);
-        
-        return this.mod(admin);
-    }
-    
-
     public ArrayList<QLAdminDTO> getArrAdmin() {
         return arrAdmin;
     }
