@@ -5,7 +5,7 @@ public class QLChiTietSachDTO {
     QLLoaiSachDTO sach;
 
     public QLChiTietSachDTO(String IDSach, String maSach, String tinhTrang){
-        this.IDSach = IDSach;s
+        this.IDSach = IDSach;
         this.maSach = maSach;
         this.tinhTrang = tinhTrang;
     }
