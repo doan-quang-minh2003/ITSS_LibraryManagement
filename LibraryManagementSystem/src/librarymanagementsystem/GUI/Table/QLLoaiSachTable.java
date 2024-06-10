@@ -1,4 +1,4 @@
-package librarymanagementsystem.GUI.TableGUI;
+package librarymanagementsystem.GUI.Table;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -11,13 +11,14 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTable;
-import javax.swing.WindowConstants;
 import javax.swing.table.DefaultTableCellRenderer;
-import librarymanagementsystem.BUS.QLKhoSachBUS;
-import librarymanagementsystem.DTO.QLKhoSachDTO;
+import javax.swing.WindowConstants;
+import librarymanagementsystem.BUS.QLLoaiSachBUS;
+import librarymanagementsystem.DTO.QLLoaiSachDTO;
 
-public class QLKhoSachTable {
-// for testing
+public class QLLoaiSachTable{
+    
+    // for testing
     private static JFrame createFrame() {
         JFrame frame = new JFrame("Testing");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -25,22 +26,38 @@ public class QLKhoSachTable {
         return frame;
     }
         
-    private static ObjectTableModel<QLKhoSachDTO> createObjectDataModel(){
-        return new ObjectTableModel<QLKhoSachDTO>() {
+    private static ObjectTableModel<QLLoaiSachDTO> createObjectDataModel(){
+        return new ObjectTableModel<QLLoaiSachDTO>() {
             @Override
-            public Object getValueAt(QLKhoSachDTO khoSach, int columnIndex) {
+            public Object getValueAt(QLLoaiSachDTO loaiSach, int columnIndex) {
                 switch (columnIndex) {
                     case 0:
-                        return khoSach.getMaSach();
+                        return loaiSach.getMaSach();
                     case 1:
-                        return khoSach.getSoLuong();
+                        return loaiSach.getTenSach();
+                    case 2:
+                        return loaiSach.getTenTacGia();
+                    case 3:
+                        return loaiSach.getTenNXB();
+                    case 4:
+                        return loaiSach.getTheLoai();
+                    case 5:
+                        return loaiSach.getNgonNgu();
+                    case 6:
+                        return loaiSach.getTomTatNoiDung();
+                    case 7:
+                        return loaiSach.getNamXB();
+                    case 8:
+                        return loaiSach.getGiaTien();
+                    case 9:
+                        return loaiSach.getSoTrang();
                 }
                 return null;
             }
 
             @Override
             public int getColumnCount() {
-                return 2;
+                return 10;
             }
 
             @Override
@@ -49,26 +66,43 @@ public class QLKhoSachTable {
                     case 0:
                         return "Mã Sách";
                     case 1:
-                        return "Số Lượng";
+                        return "Tên Sách";
+                    case 2:
+                        return "Tên Tác Giả";
+                    case 3:
+                        return "Tên NXB";
+                    case 4:
+                        return "Thể Loại";
+                    case 5:
+                        return "Ngôn Ngữ";
+                    case 6:
+                        return "Tóm Tắt Nội Dung";
+                    case 7:
+                        return "Năm Xuất Bản";
+                    case 8:
+                        return "Giá Tiền";
+                    case 9:
+                        return "Số Trang";
                 }
                 return null;
             }
         };
     }
     
-    private static PaginationDataProvider<QLKhoSachDTO> createDataProvider(
-            ObjectTableModel<QLKhoSachDTO> objectDataModel) {
-        final List<QLKhoSachDTO> list = new QLKhoSachBUS().getArrKhoSach();
+    private static PaginationDataProvider<QLLoaiSachDTO> createDataProvider(
+            ObjectTableModel<QLLoaiSachDTO> objectDataModel) {
+        final List<QLLoaiSachDTO> list = new QLLoaiSachBUS().getArrSach();
         return new InMemoryPaginationDataProvider<>(list, objectDataModel);
     }
     
-    private static PaginationDataProvider<QLKhoSachDTO> createDataProvider(
-            ObjectTableModel<QLKhoSachDTO> objectDataModel, ArrayList <QLKhoSachDTO> khoSach) {
-        final List<QLKhoSachDTO> list = khoSach;
+    private static PaginationDataProvider<QLLoaiSachDTO> createDataProvider(
+            ObjectTableModel<QLLoaiSachDTO> objectDataModel, ArrayList <QLLoaiSachDTO> loaiSach) {
+        final List<QLLoaiSachDTO> list = loaiSach;
         return new InMemoryPaginationDataProvider<>(list, objectDataModel);
     }
+    
     public JPanel getTable(){
-        ObjectTableModel<QLKhoSachDTO> objectDataModel = createObjectDataModel();
+        ObjectTableModel<QLLoaiSachDTO> objectDataModel = createObjectDataModel();
         JTable table = new JTable(objectDataModel);
         
         //** Adjust Table**//
@@ -92,26 +126,39 @@ public class QLKhoSachTable {
         table.getTableHeader().setBackground(new Color(91, 243, 207));
         table.getTableHeader().setPreferredSize(new Dimension(0,35)); // Header Height
         table.getTableHeader().setFont(new Font("verdana", Font.BOLD, 14));
+        // Change
         table.getTableHeader().setForeground(Color.WHITE);
+        //table.getTableHeader().setForeground(new Color(56, 180, 123));
+        
         //table.getTableHeader().;
         //** End Adjust **//
         
         /** Table Column Width **/
         ArrayList <Integer> width = new ArrayList<>();
+        
+        width.add(100);
         width.add(400);
+        width.add(160);
+        width.add(300);
+        width.add(230);
+        width.add(130);
         width.add(400);
+        width.add(130);
+        width.add(100);
+        width.add(100);
         
         table.setAutoCreateRowSorter(true);
-        PaginationDataProvider<QLKhoSachDTO> dataProvider = createDataProvider(objectDataModel);
-        PaginatedTableDecorator<QLKhoSachDTO> paginatedDecorator = PaginatedTableDecorator.decorate(table,
+        PaginationDataProvider<QLLoaiSachDTO> dataProvider = createDataProvider(objectDataModel);
+        PaginatedTableDecorator<QLLoaiSachDTO> paginatedDecorator = PaginatedTableDecorator.decorate(table,
                 dataProvider, new int[]{5, 10, 20, 50, 75, 100}, 10, width);
-        paginatedDecorator.getClickEvent_KhoSach();
+        //paginatedDecorator.getClickEvent(); // event for LoaiSach Table
+        paginatedDecorator.getClickEvent_LoaiSach();
         JPanel p = paginatedDecorator.getContentPanel();
         return p;
     }
     
-    public JPanel getTable(ArrayList <QLKhoSachDTO> khoSach){
-        ObjectTableModel<QLKhoSachDTO> objectDataModel = createObjectDataModel();
+    public JPanel getTable(ArrayList <QLLoaiSachDTO> loaiSach){
+        ObjectTableModel<QLLoaiSachDTO> objectDataModel = createObjectDataModel();
         JTable table = new JTable(objectDataModel);
         
         //** Adjust Table**//
@@ -135,27 +182,40 @@ public class QLKhoSachTable {
         table.getTableHeader().setBackground(new Color(91, 243, 207));
         table.getTableHeader().setPreferredSize(new Dimension(0,35)); // Header Height
         table.getTableHeader().setFont(new Font("verdana", Font.BOLD, 14));
+        // Change
         table.getTableHeader().setForeground(Color.WHITE);
+        //table.getTableHeader().setForeground(new Color(56, 180, 123));
+        
         //table.getTableHeader().;
         //** End Adjust **//
         
         /** Table Column Width **/
         ArrayList <Integer> width = new ArrayList<>();
+        
+        width.add(100);
         width.add(400);
+        width.add(160);
+        width.add(300);
+        width.add(230);
+        width.add(130);
         width.add(400);
+        width.add(130);
+        width.add(100);
+        width.add(100);
         
         table.setAutoCreateRowSorter(true);
-        PaginationDataProvider<QLKhoSachDTO> dataProvider = createDataProvider(objectDataModel, khoSach);
-        PaginatedTableDecorator<QLKhoSachDTO> paginatedDecorator = PaginatedTableDecorator.decorate(table,
+        PaginationDataProvider<QLLoaiSachDTO> dataProvider = createDataProvider(objectDataModel, loaiSach);
+        PaginatedTableDecorator<QLLoaiSachDTO> paginatedDecorator = PaginatedTableDecorator.decorate(table,
                 dataProvider, new int[]{5, 10, 20, 50, 75, 100}, 10, width);
-        paginatedDecorator.getClickEvent_KhoSach();
+        
+        paginatedDecorator.getClickEvent_LoaiSach();
         JPanel p = paginatedDecorator.getContentPanel();
         return p;
     }
     
     public void expandMode(){
         JFrame frame = createFrame();
-        JPanel p = new QLKhoSachTable().getTable();
+        JPanel p = new QLLoaiSachTable().getTable();
         //frame.add(paginatedDecorator.getContentPanel());
         p.setSize(1200, 780);
         p.setBackground(new java.awt.Color(255, 255, 255));
@@ -178,7 +238,7 @@ public class QLKhoSachTable {
     
     public static void main(String[] args) {
         JFrame frame = createFrame();
-        JPanel p = new QLKhoSachTable().getTable();
+        JPanel p = new QLLoaiSachTable().getTable();
         //frame.add(paginatedDecorator.getContentPanel());
         p.setSize(700, 500);
         p.setBackground(new java.awt.Color(255, 255, 255));

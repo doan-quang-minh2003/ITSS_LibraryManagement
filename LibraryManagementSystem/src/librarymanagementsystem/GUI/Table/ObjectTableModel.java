@@ -1,4 +1,4 @@
-package librarymanagementsystem.GUI.TableGUI;
+package librarymanagementsystem.GUI.Table;
 
 import javax.swing.table.AbstractTableModel;
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package librarymanagementsystem.GUI.TableGUI;
+package librarymanagementsystem.GUI.Table;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -13,11 +13,12 @@ import javax.swing.JPanel;
 import javax.swing.JTable;
 import javax.swing.WindowConstants;
 import javax.swing.table.DefaultTableCellRenderer;
-import librarymanagementsystem.BUS.QLPhieuNhapBUS;
-import librarymanagementsystem.DTO.QLPhieuNhapDTO;
+import librarymanagementsystem.BUS.QLNhaCungCapBUS;
+import librarymanagementsystem.DTO.QLNhaCungCapDTO;
 
-public class QLPhieuNhapTable {
+public class QLNhaCungCapTable {
 
+    // for testing
     private static JFrame createFrame() {
         JFrame frame = new JFrame("Testing");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -25,70 +26,63 @@ public class QLPhieuNhapTable {
         return frame;
     }
         
-    private static ObjectTableModel<QLPhieuNhapDTO> createObjectDataModel(){
-        return new ObjectTableModel<QLPhieuNhapDTO>() {
+    private static ObjectTableModel<QLNhaCungCapDTO> createObjectDataModel(){
+        return new ObjectTableModel<QLNhaCungCapDTO>() {
             @Override
-            public Object getValueAt(QLPhieuNhapDTO phieuNhap, int columnIndex) {
+            public Object getValueAt(QLNhaCungCapDTO nhacc, int columnIndex) {
                 switch (columnIndex) {
                     case 0:
-                        return phieuNhap.getMaNhap();
+                        return nhacc.getMaNCC();
                     case 1:
-                        return phieuNhap.getNgayNhap();
+                        return nhacc.getTenNCC();
                     case 2:
-                        return phieuNhap.getMaNhanVien();
+                        return nhacc.getSdt();
                     case 3:
-                        return phieuNhap.getMaNCC();
+                        return nhacc.getEmail();
                     case 4:
-                        return phieuNhap.getMaSach();
-                    case 5:
-                        return phieuNhap.getTongSoLuong();
-                    case 6:
-                        return phieuNhap.getTongTien();
+                        return nhacc.getDiaChi();
                 }
                 return null;
             }
 
             @Override
             public int getColumnCount() {
-                return 7;
+                return 5;
             }
 
             @Override
             public String getColumnName(int column) {
                 switch (column) {
                     case 0:
-                        return "Mã Nhập Kho";
-                    case 1:
-                        return "Ngày Nhập";
-                    case 2:
-                        return "Mã Nhân Viên";
-                    case 3:
                         return "Mã Nhà Cung Cấp";
+                    case 1:
+                        return "Tên Nhà Cung Cấp";
+                    case 2:
+                        return "Số Điện Thoại";
+                    case 3:
+                        return "Email";
                     case 4:
-                        return "Mã Sách";
-                    case 5:
-                        return "Tổng Số Lượng";
-                    case 6:
-                        return "Tổng Tiền";
+                        return "Địa Chỉ";
                 }
                 return null;
             }
         };
     }
     
-    private static PaginationDataProvider<QLPhieuNhapDTO> createDataProvider(
-            ObjectTableModel<QLPhieuNhapDTO> objectDataModel) {
-        final List<QLPhieuNhapDTO> list = new QLPhieuNhapBUS().getArrNhapKho();
+    private static PaginationDataProvider<QLNhaCungCapDTO> createDataProvider(
+            ObjectTableModel<QLNhaCungCapDTO> objectDataModel) {
+        final List<QLNhaCungCapDTO> list = new QLNhaCungCapBUS().getArrNhaCungCap();
         return new InMemoryPaginationDataProvider<>(list, objectDataModel);
     }
     
-    private static PaginationDataProvider<QLPhieuNhapDTO> createDataProvider(
-            ObjectTableModel<QLPhieuNhapDTO> objectDataModel, ArrayList <QLPhieuNhapDTO> phieuNhap) {
-        final List<QLPhieuNhapDTO> list = phieuNhap;
+    private static PaginationDataProvider<QLNhaCungCapDTO> createDataProvider(
+            ObjectTableModel<QLNhaCungCapDTO> objectDataModel, ArrayList <QLNhaCungCapDTO> nhaCungCap) {
+        final List<QLNhaCungCapDTO> list = nhaCungCap;
         return new InMemoryPaginationDataProvider<>(list, objectDataModel);
     }
+    
     public JPanel getTable(){
-        ObjectTableModel<QLPhieuNhapDTO> objectDataModel = createObjectDataModel();
+        ObjectTableModel<QLNhaCungCapDTO> objectDataModel = createObjectDataModel();
         JTable table = new JTable(objectDataModel);
         
         //** Adjust Table**//
@@ -96,6 +90,7 @@ public class QLPhieuNhapTable {
         
         DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
         centerRenderer.setHorizontalAlignment( JLabel.CENTER );
+        
         
         table.setFont(new Font("verdana", Font.PLAIN, 13));
         
@@ -107,25 +102,24 @@ public class QLPhieuNhapTable {
         
         /** Table Column Width **/
         ArrayList <Integer> width = new ArrayList<>();
-        width.add(135);
-        width.add(170);
+        
         width.add(160);
-        width.add(180);
-        width.add(370);
-        width.add(140);
-        width.add(150);
+        width.add(190);
+        width.add(130);
+        width.add(220);
+        width.add(335);
         
         table.setAutoCreateRowSorter(true);
-        PaginationDataProvider<QLPhieuNhapDTO> dataProvider = createDataProvider(objectDataModel);
-        PaginatedTableDecorator<QLPhieuNhapDTO> paginatedDecorator = PaginatedTableDecorator.decorate(table,
+        PaginationDataProvider<QLNhaCungCapDTO> dataProvider = createDataProvider(objectDataModel);
+        PaginatedTableDecorator<QLNhaCungCapDTO> paginatedDecorator = PaginatedTableDecorator.decorate(table,
                 dataProvider, new int[]{5, 10, 20, 50, 75, 100}, 10, width);
-        paginatedDecorator.getClickEvent_PhieuNhap();
+        paginatedDecorator.getClickEvent_NhaCungCap();
         JPanel p = paginatedDecorator.getContentPanel();
         return p;
     }
     
-    public JPanel getTable(ArrayList <QLPhieuNhapDTO> phieuNhap){
-        ObjectTableModel<QLPhieuNhapDTO> objectDataModel = createObjectDataModel();
+    public JPanel getTable(ArrayList <QLNhaCungCapDTO> nhaCungCap){
+        ObjectTableModel<QLNhaCungCapDTO> objectDataModel = createObjectDataModel();
         JTable table = new JTable(objectDataModel);
         
         //** Adjust Table**//
@@ -133,7 +127,6 @@ public class QLPhieuNhapTable {
         
         DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
         centerRenderer.setHorizontalAlignment( JLabel.CENTER );
-        
         
         table.setFont(new Font("verdana", Font.PLAIN, 13));
         
@@ -145,26 +138,25 @@ public class QLPhieuNhapTable {
         
         /** Table Column Width **/
         ArrayList <Integer> width = new ArrayList<>();
-        width.add(135);
-        width.add(170);
+        
         width.add(160);
-        width.add(180);
-        width.add(370);
-        width.add(140);
-        width.add(150);
+        width.add(190);
+        width.add(130);
+        width.add(220);
+        width.add(335);
         
         table.setAutoCreateRowSorter(true);
-        PaginationDataProvider<QLPhieuNhapDTO> dataProvider = createDataProvider(objectDataModel, phieuNhap);
-        PaginatedTableDecorator<QLPhieuNhapDTO> paginatedDecorator = PaginatedTableDecorator.decorate(table,
+        PaginationDataProvider<QLNhaCungCapDTO> dataProvider = createDataProvider(objectDataModel, nhaCungCap);
+        PaginatedTableDecorator<QLNhaCungCapDTO> paginatedDecorator = PaginatedTableDecorator.decorate(table,
                 dataProvider, new int[]{5, 10, 20, 50, 75, 100}, 10, width);
-        paginatedDecorator.getClickEvent_PhieuNhap();
+        paginatedDecorator.getClickEvent_NhaCungCap();
         JPanel p = paginatedDecorator.getContentPanel();
         return p;
     }
     
     public void expandMode(){
         JFrame frame = createFrame();
-        JPanel p = new QLPhieuNhapTable().getTable();
+        JPanel p = new QLNhaCungCapTable().getTable();
         p.setSize(1200, 780);
         p.setBackground(new java.awt.Color(255, 255, 255));
         frame.add(p);
@@ -177,10 +169,11 @@ public class QLPhieuNhapTable {
         frame.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
-                System.out.println("asdjhgsakdjhaskjdhsajik");
+                System.out.println("");
                 frame.dispose();
             }
         });
         frame.setVisible(true);
     }
-}
+    
+    }

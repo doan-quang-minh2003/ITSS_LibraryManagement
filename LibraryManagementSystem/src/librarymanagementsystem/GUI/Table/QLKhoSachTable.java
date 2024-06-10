@@ -1,4 +1,4 @@
-package librarymanagementsystem.GUI.TableGUI;
+package librarymanagementsystem.GUI.Table;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -13,12 +13,11 @@ import javax.swing.JPanel;
 import javax.swing.JTable;
 import javax.swing.WindowConstants;
 import javax.swing.table.DefaultTableCellRenderer;
-import librarymanagementsystem.BUS.QLAdminBUS;
-import librarymanagementsystem.DTO.QLAdminDTO;
+import librarymanagementsystem.BUS.QLKhoSachBUS;
+import librarymanagementsystem.DTO.QLKhoSachDTO;
 
-public class QLAdminTable {
-
-    // for testing
+public class QLKhoSachTable {
+// for testing
     private static JFrame createFrame() {
         JFrame frame = new JFrame("Testing");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -26,15 +25,15 @@ public class QLAdminTable {
         return frame;
     }
         
-    private static ObjectTableModel<QLAdminDTO> createObjectDataModel(){
-        return new ObjectTableModel<QLAdminDTO>() {
+    private static ObjectTableModel<QLKhoSachDTO> createObjectDataModel(){
+        return new ObjectTableModel<QLKhoSachDTO>() {
             @Override
-            public Object getValueAt(QLAdminDTO Admin, int columnIndex) {
+            public Object getValueAt(QLKhoSachDTO khoSach, int columnIndex) {
                 switch (columnIndex) {
                     case 0:
-                        return Admin.getTkAdmin();
+                        return khoSach.getMaSach();
                     case 1:
-                        return Admin.getPassword();
+                        return khoSach.getSoLuong();
                 }
                 return null;
             }
@@ -48,28 +47,28 @@ public class QLAdminTable {
             public String getColumnName(int column) {
                 switch (column) {
                     case 0:
-                        return "Tài Khoản Admin";
+                        return "Mã Sách";
                     case 1:
-                        return "password";
+                        return "Số Lượng";
                 }
                 return null;
             }
         };
     }
     
-    private static PaginationDataProvider<QLAdminDTO> createDataProvider(
-            ObjectTableModel<QLAdminDTO> objectDataModel) {
-        final List<QLAdminDTO> list = new QLAdminBUS().getArrAdmin();
+    private static PaginationDataProvider<QLKhoSachDTO> createDataProvider(
+            ObjectTableModel<QLKhoSachDTO> objectDataModel) {
+        final List<QLKhoSachDTO> list = new QLKhoSachBUS().getArrKhoSach();
         return new InMemoryPaginationDataProvider<>(list, objectDataModel);
     }
     
-    private static PaginationDataProvider<QLAdminDTO> createDataProvider(
-            ObjectTableModel<QLAdminDTO> objectDataModel, ArrayList <QLAdminDTO> admin) {
-        final List<QLAdminDTO> list = admin;
+    private static PaginationDataProvider<QLKhoSachDTO> createDataProvider(
+            ObjectTableModel<QLKhoSachDTO> objectDataModel, ArrayList <QLKhoSachDTO> khoSach) {
+        final List<QLKhoSachDTO> list = khoSach;
         return new InMemoryPaginationDataProvider<>(list, objectDataModel);
     }
     public JPanel getTable(){
-        ObjectTableModel<QLAdminDTO> objectDataModel = createObjectDataModel();
+        ObjectTableModel<QLKhoSachDTO> objectDataModel = createObjectDataModel();
         JTable table = new JTable(objectDataModel);
         
         //** Adjust Table**//
@@ -99,21 +98,20 @@ public class QLAdminTable {
         
         /** Table Column Width **/
         ArrayList <Integer> width = new ArrayList<>();
-        width.add(260);
-        width.add(260);
-        width.add(355);
+        width.add(400);
+        width.add(400);
         
         table.setAutoCreateRowSorter(true);
-        PaginationDataProvider<QLAdminDTO> dataProvider = createDataProvider(objectDataModel);
-        PaginatedTableDecorator<QLAdminDTO> paginatedDecorator = PaginatedTableDecorator.decorate(table,
+        PaginationDataProvider<QLKhoSachDTO> dataProvider = createDataProvider(objectDataModel);
+        PaginatedTableDecorator<QLKhoSachDTO> paginatedDecorator = PaginatedTableDecorator.decorate(table,
                 dataProvider, new int[]{5, 10, 20, 50, 75, 100}, 10, width);
-        paginatedDecorator.getClickEvent_Admin();
+        paginatedDecorator.getClickEvent_KhoSach();
         JPanel p = paginatedDecorator.getContentPanel();
         return p;
     }
     
-    public JPanel getTable(ArrayList <QLAdminDTO> admin){
-        ObjectTableModel<QLAdminDTO> objectDataModel = createObjectDataModel();
+    public JPanel getTable(ArrayList <QLKhoSachDTO> khoSach){
+        ObjectTableModel<QLKhoSachDTO> objectDataModel = createObjectDataModel();
         JTable table = new JTable(objectDataModel);
         
         //** Adjust Table**//
@@ -143,22 +141,21 @@ public class QLAdminTable {
         
         /** Table Column Width **/
         ArrayList <Integer> width = new ArrayList<>();
-        width.add(260);
-        width.add(260);
-        width.add(355);
+        width.add(400);
+        width.add(400);
         
         table.setAutoCreateRowSorter(true);
-        PaginationDataProvider<QLAdminDTO> dataProvider = createDataProvider(objectDataModel, admin);
-        PaginatedTableDecorator<QLAdminDTO> paginatedDecorator = PaginatedTableDecorator.decorate(table,
+        PaginationDataProvider<QLKhoSachDTO> dataProvider = createDataProvider(objectDataModel, khoSach);
+        PaginatedTableDecorator<QLKhoSachDTO> paginatedDecorator = PaginatedTableDecorator.decorate(table,
                 dataProvider, new int[]{5, 10, 20, 50, 75, 100}, 10, width);
-        paginatedDecorator.getClickEvent_Admin();
+        paginatedDecorator.getClickEvent_KhoSach();
         JPanel p = paginatedDecorator.getContentPanel();
         return p;
     }
     
     public void expandMode(){
         JFrame frame = createFrame();
-        JPanel p = new QLAdminTable().getTable();
+        JPanel p = new QLKhoSachTable().getTable();
         //frame.add(paginatedDecorator.getContentPanel());
         p.setSize(1200, 780);
         p.setBackground(new java.awt.Color(255, 255, 255));
@@ -181,7 +178,7 @@ public class QLAdminTable {
     
     public static void main(String[] args) {
         JFrame frame = createFrame();
-        JPanel p = new QLAdminTable().getTable();
+        JPanel p = new QLKhoSachTable().getTable();
         //frame.add(paginatedDecorator.getContentPanel());
         p.setSize(700, 500);
         p.setBackground(new java.awt.Color(255, 255, 255));
@@ -192,5 +189,4 @@ public class QLAdminTable {
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
-    
 }

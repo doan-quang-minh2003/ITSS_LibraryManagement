@@ -78,7 +78,7 @@ public class ThemTheForm extends JFrame {
         this.getContentPane().setLayout((LayoutManager)null);
         this.jPanel1.setOpaque(false);
         this.jPanel1.setLayout((LayoutManager)null);
-        this.addButton.setIcon(new ImageIcon(this.getClass().getResource("../../images/output-onlinepngtools - 2020-05-28T235936.194.png")));
+        this.addButton.setIcon(new ImageIcon(this.getClass().getResource("../../images/addbtn.png")));
         this.addButton.addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent evt) {
                 ThemTheForm.this.addButtonMouseClicked(evt);
@@ -86,7 +86,7 @@ public class ThemTheForm extends JFrame {
         });
         this.addButton.setBounds(10, 7, 35, 35);
         this.jPanel1.add(this.addButton);
-        this.exitButton.setIcon(new ImageIcon(this.getClass().getResource("../../images/output-onlinepngtools (43).png")));
+        this.exitButton.setIcon(new ImageIcon(this.getClass().getResource("../../images/exit.png")));
         this.exitButton.addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent evt) {
                 ThemTheForm.this.exitButtonMouseClicked(evt);
@@ -131,7 +131,7 @@ public class ThemTheForm extends JFrame {
         this.ngayHetHan_Label.setOpaque(false);
         this.ngayHetHan_Label.setBounds(560, 125, 160, 30);
         this.jPanel1.add(this.ngayHetHan_Label);
-        this.nhanVienForm.setIcon(new ImageIcon(this.getClass().getResource("../../images/output-onlinepngtoolsthemthe.png")));
+        this.nhanVienForm.setIcon(new ImageIcon(this.getClass().getResource("../../images/images/cardaddform.png")));
         this.nhanVienForm.setBounds(0, 0, 830, 243);
         this.jPanel1.add(this.nhanVienForm);
         this.jPanel1.setBounds(0, 0, 830, 243);

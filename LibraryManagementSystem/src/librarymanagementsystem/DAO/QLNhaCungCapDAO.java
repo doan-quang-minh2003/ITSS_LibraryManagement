@@ -56,4 +56,16 @@ public class QLNhaCungCapDAO {
         DBNhaCungCap.closeConnection();
         return check;
     }
+
+    public Boolean mod(QLNhaCungCapDTO nhaCungCap){
+        DBNhaCungCap = new DBConnection();
+        Boolean check = DBNhaCungCap.SQLUpdate("Update nhaCungCap Set "
+                + " tenNCC='" + nhaCungCap.getTenNCC()
+                + "', sdt='" + nhaCungCap.getSdt()
+                + "', email='" + nhaCungCap.getEmail()
+                + "', diaChi='" + nhaCungCap.getDiaChi()
+                + "' where maNCC='" + nhaCungCap.getMaNCC()+ "';");
+        DBNhaCungCap.closeConnection();
+        return check;
+    }
 }
