@@ -1,4 +1,4 @@
-package librarymanagementsystem.GUI.TableGUI;
+package librarymanagementsystem.GUI.Table;
 
 
 import java.awt.event.*;

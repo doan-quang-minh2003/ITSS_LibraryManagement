@@ -182,7 +182,23 @@ public class QLNhaCungCapBUS {
         } 
         return check;
     }
+    public Boolean mod(QLNhaCungCapDTO nhaCungCap){
+        Boolean check = nhaCungCapDAO.mod(nhaCungCap);
+        if (check){
+            for (QLNhaCungCapDTO s : arrNhaCungCap){
+                if (s.getMaNCC().equals(nhaCungCap.getMaNCC())){
+                    arrNhaCungCap.set(arrNhaCungCap.indexOf(s), nhaCungCap);
+                    break;
+                }
+            }
+        }
+        return check;
+    }
 
+    public Boolean mod(String maNCC, String tenNCC, String sdt, String email, String diaChi){
+        QLNhaCungCapDTO nhaCungCap=new QLNhaCungCapDTO(maNCC, tenNCC, sdt, email, diaChi);
+        return this.mod(nhaCungCap);
+    }
     public ArrayList<QLNhaCungCapDTO> getArrNhaCungCap() {
         return arrNhaCungCap;
     }

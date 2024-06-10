@@ -101,7 +101,7 @@ public class WelcomeGUI extends javax.swing.JFrame{
 
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new WelcomeGUI("Lưu Thành Đạt").setVisible(true);
+                new WelcomeGUI("Admin").setVisible(true);
             }
         });
     }

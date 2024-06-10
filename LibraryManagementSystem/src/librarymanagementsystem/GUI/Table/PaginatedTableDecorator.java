@@ -1,4 +1,4 @@
-package librarymanagementsystem.GUI.TableGUI;
+package librarymanagementsystem.GUI.Table;
 
 import javax.swing.*;
 import javax.swing.event.RowSorterEvent;

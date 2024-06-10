@@ -69,7 +69,7 @@ public class ThemLoaiSachForm extends javax.swing.JFrame {
         jPanel1.setOpaque(false);
         jPanel1.setLayout(null);
 
-        addButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("../../images/output-onlinepngtools - 2020-05-28T235936.194.png"))); // NOI18N
+        addButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("../../images/addbtn.png"))); // NOI18N
         addButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 addButtonMouseClicked(evt);
@@ -78,7 +78,7 @@ public class ThemLoaiSachForm extends javax.swing.JFrame {
         addButton.setBounds(20, 10, 35, 35);
         jPanel1.add(addButton);
 
-        exitButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("../../images/output-onlinepngtools (43).png"))); // NOI18N
+        exitButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("../../images/exit.png"))); // NOI18N
         exitButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 exitButtonMouseClicked(evt);
@@ -87,7 +87,7 @@ public class ThemLoaiSachForm extends javax.swing.JFrame {
         exitButton.setBounds(782, 20, 20, 20);
         jPanel1.add(exitButton);
 
-        addHinh.setIcon(new javax.swing.ImageIcon(getClass().getResource("../../images/output-onlinepngtools - 2020-05-29T000010.861.png"))); // NOI18N
+        addHinh.setIcon(new javax.swing.ImageIcon(getClass().getResource("../../images/addimagebtn.png"))); // NOI18N
         addHinh.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 addHinhMouseClicked(evt);
@@ -185,7 +185,7 @@ public class ThemLoaiSachForm extends javax.swing.JFrame {
         hinh_label.setBounds(650, 434, 150, 20);
         jPanel1.add(hinh_label);
 
-        loaiSachForm.setIcon(new javax.swing.ImageIcon(getClass().getResource("../../images/output-onlinepngtools - 2020-05-28T235458.996.png"))); // NOI18N
+        loaiSachForm.setIcon(new javax.swing.ImageIcon(getClass().getResource("../../images/images/bookcategorymodifyform.png"))); // NOI18N
         loaiSachForm.setBounds(0, 0, 830, 523);
         jPanel1.add(loaiSachForm);
         jPanel1.setBounds(0, 0, 830, 523);

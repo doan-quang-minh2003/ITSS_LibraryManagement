@@ -1,5 +1,6 @@
 package librarymanagementsystem.DTO;
 
+import java.util.ArrayList;
 public class QLPhieuNhapDTO {
     String maNhap, ngayNhap;
     ArrayList <String> maSach;

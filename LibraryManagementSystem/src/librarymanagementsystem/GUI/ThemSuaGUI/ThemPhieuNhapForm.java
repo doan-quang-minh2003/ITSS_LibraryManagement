@@ -61,7 +61,7 @@ public class ThemPhieuNhapForm extends javax.swing.JFrame{
         jPanel1.setOpaque(false);
         jPanel1.setLayout(null);
 
-        addButton.setIcon(new javax.swing.ImageIcon(getClass().getResource(""))); // NOI18N
+        addButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("../../images/addbtn.png"))); // NOI18N
         addButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 addButtonMouseClicked(evt);
@@ -70,7 +70,7 @@ public class ThemPhieuNhapForm extends javax.swing.JFrame{
         addButton.setBounds(10, 7, 35, 35);
         jPanel1.add(addButton);
 
-        exitButton.setIcon(new javax.swing.ImageIcon(getClass().getResource(""))); // NOI18N
+        exitButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("../../images/exit.png"))); // NOI18N
         exitButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 exitButtonMouseClicked(evt);
@@ -191,7 +191,7 @@ public class ThemPhieuNhapForm extends javax.swing.JFrame{
         
         jPanel1.add(jScrollPane1);
 
-        nhanVienForm.setIcon(new javax.swing.ImageIcon(getClass().getResource(""))); // NOI18N
+        nhanVienForm.setIcon(new javax.swing.ImageIcon(getClass().getResource("../../images/importgoodsform.png"))); // NOI18N
         nhanVienForm.setBounds(0, 0, 830, 592);
         jPanel1.add(nhanVienForm);
         jPanel1.setBounds(0, 0, 830, 592);

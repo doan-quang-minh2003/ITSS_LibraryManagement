@@ -47,7 +47,7 @@ public class ThemNhaCungCapForm extends javax.swing.JFrame{
         jPanel1.setOpaque(false);
         jPanel1.setLayout(null);
 
-        addButton.setIcon(new javax.swing.ImageIcon(getClass().getResource(""))); // NOI18N
+        addButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("../../images/addbtn.png"))); // NOI18N
         addButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 addButtonMouseClicked(evt);
@@ -56,7 +56,7 @@ public class ThemNhaCungCapForm extends javax.swing.JFrame{
         addButton.setBounds(10, 7, 35, 35);
         jPanel1.add(addButton);
 
-        exitButton.setIcon(new javax.swing.ImageIcon(getClass().getResource(""))); // NOI18N
+        exitButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("../../images/exit.png"))); // NOI18N
         exitButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 exitButtonMouseClicked(evt);
@@ -110,7 +110,7 @@ public class ThemNhaCungCapForm extends javax.swing.JFrame{
         email_textField.setBounds(315, 246, 200, 30);
         jPanel1.add(email_textField);
 
-        nhaCungCapForm.setIcon(new javax.swing.ImageIcon(getClass().getResource(""))); // NOI18N
+        nhaCungCapForm.setIcon(new javax.swing.ImageIcon(getClass().getResource("../../images/supplier.png"))); // NOI18N
         nhaCungCapForm.setBounds(0, 0, 550, 402);
         jPanel1.add(nhaCungCapForm);
         jPanel1.setBounds(0, 0, 550, 402);
