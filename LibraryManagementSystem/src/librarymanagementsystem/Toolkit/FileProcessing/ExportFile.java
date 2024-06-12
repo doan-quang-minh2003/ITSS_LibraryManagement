@@ -236,7 +236,6 @@ public class ExportFile {
                     row.createCell(5, CellType.STRING).setCellValue(nhanVien.getSdt());
                     row.createCell(6, CellType.STRING).setCellValue(nhanVien.getEmail());
                     row.createCell(7, CellType.STRING).setCellValue(nhanVien.getChucVu());
-                    row.createCell(8, CellType.STRING).setCellValue(nhanVien.getRFID_code());
                 }
 
                 for(int i = 0; i < rownum; ++i) {
@@ -585,7 +584,6 @@ public class ExportFile {
                     row = sheet.createRow(rownum);
                     row.createCell(0, CellType.STRING).setCellValue(admin.getTkAdmin());
                     row.createCell(1, CellType.STRING).setCellValue(admin.getPassword());
-                    row.createCell(2, CellType.STRING).setCellValue(admin.getRFID_code());
                 }
 
                 for(int i = 0; i < rownum; ++i) {

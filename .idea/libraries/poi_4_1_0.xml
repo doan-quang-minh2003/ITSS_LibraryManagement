@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="poi-4.1.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/LibraryManagementSystem/src/librarymanagementsystem/lib/poi/poi-4.1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/LibraryManagementSystem/src/librarymanagementsystem/lib/poi/commons-collections4-4.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/LibraryManagementSystem/src/librarymanagementsystem/lib/poi/commons-codec-1.12.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

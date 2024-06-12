@@ -3,7 +3,7 @@ package librarymanagementsystem.GUI.ModuleGUI;
 import java.util.ArrayList;
 import java.util.Arrays;
 import librarymanagementsystem.Toolkit.DataProcessing;
-import librarymanagementsystem.GUI.TableGUI.*;
+import librarymanagementsystem.GUI.Table.*;
 import librarymanagementsystem.GUI.ThanhPhanGUI.ComboCheckBox;
 import librarymanagementsystem.GUI.ThemSuaGUI.*;
 import librarymanagementsystem.DTO.*;
