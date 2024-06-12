@@ -2486,13 +2486,6 @@ public class FilterFunction {
                 }
             }
         }
-        else if (header.equals(headers[2])){
-            for (QLAdminDTO e : table){
-                if (e.getRFID_code().equals(value)){
-                    filter_res.add(e);
-                }
-            }
-        }
         
         return filter_res;
     }
@@ -2510,13 +2503,6 @@ public class FilterFunction {
         else if (header.equals(headers[1])){
             for (QLAdminDTO e : table){
                 if (!e.getPassword().equals(value)){
-                    filter_res.add(e);
-                }
-            }
-        }
-        else if (header.equals(headers[2])){
-            for (QLAdminDTO e : table){
-                if (!e.getRFID_code().equals(value)){
                     filter_res.add(e);
                 }
             }
@@ -2542,13 +2528,7 @@ public class FilterFunction {
                 }
             }
         }
-        else if (header.equals(headers[2])){
-            for (QLAdminDTO e : table){
-                if (e.getRFID_code().contains(value)){
-                    filter_res.add(e);
-                }
-            }
-        }
+
         
         
         return filter_res;
@@ -2567,13 +2547,6 @@ public class FilterFunction {
         else if (header.equals(headers[1])){
             for (QLAdminDTO e : table){
                 if (!e.getPassword().contains(value)){
-                    filter_res.add(e);
-                }
-            }
-        }
-        else if (header.equals(headers[2])){
-            for (QLAdminDTO e : table){
-                if (!e.getRFID_code().contains(value)){
                     filter_res.add(e);
                 }
             }
@@ -2600,13 +2573,6 @@ public class FilterFunction {
                 }
             }
         }
-        else if (header.equals(headers[2])){
-            for (QLAdminDTO e : table){
-                if (e.getRFID_code().startsWith(value)){
-                    filter_res.add(e);
-                }
-            }
-        }
         
         
         return filter_res;
@@ -2625,13 +2591,6 @@ public class FilterFunction {
         else if (header.equals(headers[1])){
             for (QLAdminDTO e : table){
                 if (e.getPassword().endsWith(value)){
-                    filter_res.add(e);
-                }
-            }
-        }
-        else if (header.equals(headers[2])){
-            for (QLAdminDTO e : table){
-                if (e.getRFID_code().endsWith(value)){
                     filter_res.add(e);
                 }
             }
