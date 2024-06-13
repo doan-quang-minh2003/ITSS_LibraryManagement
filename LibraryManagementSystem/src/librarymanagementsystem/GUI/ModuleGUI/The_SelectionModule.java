@@ -1,7 +1,7 @@
 package librarymanagementsystem.GUI.ModuleGUI;
 
 import librarymanagementsystem.GUI.*;
-import librarymanagementsystem.GUI.HienThiGUI.*;
+import librarymanagementsystem.GUI.ElementsGUI.ChoiceGUI.*;
 import javax.swing.JPanel;
 
 public class The_SelectionModule{
@@ -20,14 +20,14 @@ public class The_SelectionModule{
         jPanel1.setOpaque(false);
         jPanel1.setLayout(null);
         
-        the_Choice = new ChoiceElement("../../images/card4.png", "QUẢN LÝ THẺ").getPanel();
+        the_Choice = new ChoiceElement("../../../images/card4.png", "QUẢN LÝ THẺ").getPanel();
         the_Choice.setBounds(180, 200, 220, 177);
         the_Choice.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 the_ChoiceMouseClicked(evt);
             }
         });
-        khachhang_Choice = new ChoiceElement("../../images/user1.png", "QUẢN LÝ KHÁCH HÀNG").getPanel();
+        khachhang_Choice = new ChoiceElement("../../../images/user1.png", "QUẢN LÝ KHÁCH HÀNG").getPanel();
         khachhang_Choice.setBounds(530, 200, 220, 177);
         khachhang_Choice.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {

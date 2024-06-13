@@ -233,7 +233,7 @@ public class QLKhachHangBUS {
         int stage_2 = 0; // Nhóm người trưởng thành
         int stage_3 = 0; // Nhóm người lớn tuổi
         for (QLKhachHangDTO e : arrKhachHang){
-            if (t.getAge(e.getNgaySinh()) <= 19){       // Nhóm trẻ em và thanh thiếu niên
+            if (t.getAge(e.getNgaySinh()) <= 25){       // Nhóm trẻ em và thanh thiếu niên
                 stage_1++;
             }
             else if (t.getAge(e.getNgaySinh()) <= 49){  // Nhóm người trưởng thành

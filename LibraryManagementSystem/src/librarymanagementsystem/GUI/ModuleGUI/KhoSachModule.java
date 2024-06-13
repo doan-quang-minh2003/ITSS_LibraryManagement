@@ -1,20 +1,16 @@
 package librarymanagementsystem.GUI.ModuleGUI;
 
-import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Arrays;
 import librarymanagementsystem.Toolkit.DataProcessing;
 import librarymanagementsystem.Toolkit.FileProcessing.*;
-import librarymanagementsystem.GUI.Table.*;
-import librarymanagementsystem.GUI.HienThiGUI.*;
+import librarymanagementsystem.GUI.ElementsGUI.TableGUI.*;
 import librarymanagementsystem.DTO.*;
 import librarymanagementsystem.BUS.*;
-import librarymanagementsystem.GUI.*;
 
 import javax.swing.JPanel;
-import librarymanagementsystem.GUI.ThanhPhanGUI.ComboCheckBox;
-import librarymanagementsystem.GUI.ThemSuaGUI.ThemLoaiSachForm;
-import librarymanagementsystem.GUI.ThemSuaGUI.ThemPhieuNhapForm;
+import librarymanagementsystem.GUI.ElementsGUI.FilterGUI.FilterElement.ComboCheckBox;
+import librarymanagementsystem.GUI.ElementsGUI.FormGUI.ThemPhieuNhapForm;
 
 public class KhoSachModule {
     private static QLKhoSachBUS khoSachBUS = new QLKhoSachBUS();
@@ -77,7 +73,7 @@ public class KhoSachModule {
         search_bar.setBounds(40, 55, 320, 46);
         jPanel1.add(search_bar);
 
-        them_btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("../../addBox.png"))); // NOI18N
+        them_btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("../../images/addbox.png"))); // NOI18N
         them_btn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 them_btnMouseClicked(evt);

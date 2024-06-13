@@ -22,9 +22,9 @@ public class DBConnection {
     
     public DBConnection(){
         if (checkDriver() == true){
-            this.DBName = "quanlythuvien";
+            this.DBName = "mysql";
             this.username = "root";
-            this.password = "123";
+            this.password = "";
             setupConnection();
         }
     }

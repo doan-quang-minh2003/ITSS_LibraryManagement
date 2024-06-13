@@ -2,11 +2,12 @@ package librarymanagementsystem.GUI.ModuleGUI;
 
 import java.awt.Color;
 import java.util.ArrayList;
+
+import librarymanagementsystem.GUI.ElementsGUI.ChartDrawing;
 import librarymanagementsystem.Toolkit.DataProcessing;
 import librarymanagementsystem.Toolkit.ThongKe;
-import librarymanagementsystem.GUI.HienThiGUI.*;
+import librarymanagementsystem.GUI.ElementsGUI.ChoiceGUI.*;
 import librarymanagementsystem.BUS.*;
-import librarymanagementsystem.GUI.*;
 
 import javax.swing.JPanel;
 
@@ -25,9 +26,9 @@ public class ThongKeModule_The extends javax.swing.JFrame {
         int value_2 = theBUS.getSoLuongThe();
         int value_3 = khachHangBUS.getSoLuongKhachHang();
 
-        JPanel card_1 = new dashboardCard("THẺ", Integer.toString(value_1), "../../images/card.png").getdashboardCard();
-        JPanel card_2 = new dashboardCard("THẺ (MỚI)", Integer.toString(value_2), "../../images/card3.png").getdashboardCard();
-        JPanel card_3 = new dashboardCard("KHÁCH HÀNG", Integer.toString(value_3), "../../images/user.png").getdashboardCard();
+        JPanel card_1 = new dashboardCard("THẺ", Integer.toString(value_1), "../../../images/card.png").getdashboardCard();
+        JPanel card_2 = new dashboardCard("THẺ (MỚI)", Integer.toString(value_2), "../../../images/card3.png").getdashboardCard();
+        JPanel card_3 = new dashboardCard("KHÁCH HÀNG", Integer.toString(value_3), "../../../images/user.png").getdashboardCard();
         card_1.setBounds(20, 30, 220, 134);
         card_2.setBounds(365, 30, 220, 134);
         card_3.setBounds(710, 30, 220, 134);

@@ -28,9 +28,9 @@ import javax.swing.border.Border;
 import librarymanagementsystem.BUS.QLKhachHangBUS;
 import librarymanagementsystem.DTO.QLKhachHangDTO;
 import librarymanagementsystem.GUI.AlertGUI;
-import librarymanagementsystem.GUI.Table.QLKhachHangTable;
-import librarymanagementsystem.GUI.ThanhPhanGUI.ComboCheckBox;
-import librarymanagementsystem.GUI.ThemSuaGUI.ThemKhachHangForm;
+import librarymanagementsystem.GUI.ElementsGUI.TableGUI.QLKhachHangTable;
+import librarymanagementsystem.GUI.ElementsGUI.FilterGUI.FilterElement.ComboCheckBox;
+import librarymanagementsystem.GUI.ElementsGUI.FormGUI.ThemKhachHangForm;
 import librarymanagementsystem.Toolkit.DataProcessing;
 import librarymanagementsystem.Toolkit.FileProcessing.ExportFile;
 import librarymanagementsystem.Toolkit.FileProcessing.ImportFile;
@@ -88,10 +88,10 @@ public class KhachHangModule {
             }
         });
         jPanel1.add(searchtextfield);
-        search_bar.setIcon(new ImageIcon(this.getClass().getResource("../../images/output-onlinepngtools - 2020-05-28T185554.332.png")));
+        search_bar.setIcon(new ImageIcon(this.getClass().getResource("../../images/searchbox.png")));
         search_bar.setBounds(40, 55, 320, 46);
         jPanel1.add(search_bar);
-        them_btn.setIcon(new ImageIcon(this.getClass().getResource("../../images/output-onlinepngtools - 2020-05-28T203841.556.png")));
+        them_btn.setIcon(new ImageIcon(this.getClass().getResource("../../images/addbox.png")));
         them_btn.addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent evt) {
                 KhachHangModule.this.them_btnMouseClicked(evt);
@@ -99,7 +99,7 @@ public class KhachHangModule {
         });
         them_btn.setBounds(410, 30, 160, 78);
         jPanel1.add(them_btn);
-        nhapexcel_btn.setIcon(new ImageIcon(this.getClass().getResource("../../images/output-onlinepngtools - 2020-05-28T203937.073.png")));
+        nhapexcel_btn.setIcon(new ImageIcon(this.getClass().getResource("../../images/importexcelbox.png")));
         nhapexcel_btn.addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent evt) {
                 KhachHangModule.this.nhapexcel_btnMouseClicked(evt);
@@ -107,7 +107,7 @@ public class KhachHangModule {
         });
         nhapexcel_btn.setBounds(580, 30, 160, 78);
         jPanel1.add(nhapexcel_btn);
-        xuatexcel_btn.setIcon(new ImageIcon(this.getClass().getResource("../../images/output-onlinepngtools - 2020-05-28T203932.633.png")));
+        xuatexcel_btn.setIcon(new ImageIcon(this.getClass().getResource("../../images/exportexcelbox.png")));
         xuatexcel_btn.addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent evt) {
                 KhachHangModule.this.xuatexcel_btnMouseClicked(evt);
@@ -115,7 +115,7 @@ public class KhachHangModule {
         });
         xuatexcel_btn.setBounds(750, 30, 160, 78);
         jPanel1.add(xuatexcel_btn);
-        expand_btn.setIcon(new ImageIcon(this.getClass().getResource("../../images/output-onlinepngtools - 2020-06-10T234019.664.png")));
+        expand_btn.setIcon(new ImageIcon(this.getClass().getResource("../../images/zoomout.png")));
         expand_btn.setBounds(45, 115, 34, 34);
         expand_btn.addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent evt) {
@@ -123,7 +123,7 @@ public class KhachHangModule {
             }
         });
         jPanel1.add(expand_btn);
-        refresh_btn.setIcon(new ImageIcon(this.getClass().getResource("../../images/output-onlinepngtools - 2020-06-10T234012.187.png")));
+        refresh_btn.setIcon(new ImageIcon(this.getClass().getResource("../../images/reload.png")));
         refresh_btn.setBounds(89, 115, 34, 34);
         refresh_btn.addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent evt) {

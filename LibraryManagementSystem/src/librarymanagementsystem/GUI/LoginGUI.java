@@ -61,7 +61,7 @@ public class LoginGUI extends JFrame{
         jLabel_username.setMaximumSize(new java.awt.Dimension(83, 21));
         jLabel_username.setMinimumSize(new java.awt.Dimension(83, 21));
         jLabel_username.setPreferredSize(new java.awt.Dimension(83, 21));
-        jLabel_username.setBounds(138, 197, 83, 21);
+        jLabel_username.setBounds(138, 197, 100, 21);
         
         jLabel_username.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -93,7 +93,7 @@ public class LoginGUI extends JFrame{
         username_field.setBorder(null);
         username_field.setOpaque(false);
         username_field.setPreferredSize(new java.awt.Dimension(83, 21));
-        username_field.setBounds(138, 197, 280, 21);
+        username_field.setBounds(138, 197, 320, 21);
         username_field.setFocusTraversalKeysEnabled(false);
         
         username_field.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -140,6 +140,11 @@ public class LoginGUI extends JFrame{
         );
 
         pLogin.add(exit_btn);
+
+        pLogin.setBounds(0, 0, 530, 340);
+        login_form.setIcon(new javax.swing.ImageIcon(getClass().getResource("../images/login.png"))); // NOI18N
+        login_form.setBounds(10, 10, 500, 312);
+        pLogin.add(login_form);
         
         getContentPane().add(pLogin);
 
@@ -185,7 +190,8 @@ public class LoginGUI extends JFrame{
         if (kiemTraDangNhap()){
             System.out.println("Đăng Nhập Thành Công");
             System.out.println("Current Session: " + current_session);
-            // 
+            new Main_2(current_session).setVisible(true);
+            new WelcomeGUI(current_session).setVisible(true);
             this.dispose();
         }
         else{

@@ -51,11 +51,11 @@ public class WelcomeGUI extends javax.swing.JFrame{
         welcome_content_2.setBounds(160, 260, 300, 40);
         jPanel1.add(welcome_content_2);
 
-        line_label.setIcon(new javax.swing.ImageIcon(getClass().getResource("../images/line_320_1.png"))); // NOI18N
+        line_label.setIcon(new javax.swing.ImageIcon(getClass().getResource("../images/line.png"))); // NOI18N
         line_label.setBounds(157, 316, 320, 1);
         jPanel1.add(line_label);
 
-        exit_btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("../images/exit_2_btn_20_17.png"))); // NOI18N
+        exit_btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("../images/exit1.png"))); // NOI18N
         exit_btn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 exit_btnMouseClicked(evt);

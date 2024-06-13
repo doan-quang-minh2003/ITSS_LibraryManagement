@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import javax.swing.JPanel;
 import javax.swing.JScrollBar;
 import librarymanagementsystem.BUS.QLLoaiSachBUS;
-import librarymanagementsystem.GUI.ChartDrawing;
-import librarymanagementsystem.GUI.HienThiGUI.dashboardCard_2;
+import librarymanagementsystem.GUI.ElementsGUI.ChartDrawing;
+import librarymanagementsystem.GUI.ElementsGUI.ChoiceGUI.dashboardCard_2;
 import librarymanagementsystem.Toolkit.DataProcessing;
 import librarymanagementsystem.Toolkit.ThongKe;
 import org.jfree.chart.ChartPanel;
@@ -21,10 +21,10 @@ public class ThongKeModule_Sach {
     public static JPanel getTrangChuGUI() {
         initComponents();
         new QLLoaiSachBUS();
-        JPanel card_1 = new dashboardCard_2("Số Lượng Sách", Integer.toString(tk.soLuong_Sach()), "../../images/book_1.png").getdashboardCard();
-        JPanel card_2 = new dashboardCard_2("Thể Loại", Integer.toString(tk.soLuong_Sach_TheLoai()), "../../images/book_2.png").getdashboardCard();
-        JPanel card_3 = new dashboardCard_2("Sách Việt Nam", Integer.toString(tk.soLuong_Sach_NgonNgu("Tiếng Việt")), "../../images/book_3.png").getdashboardCard();
-        JPanel card_4 = new dashboardCard_2("Sách Nước Ngoài", Integer.toString(tk.soLuong_Sach_NgonNgu("Tiếng Anh")), "../../images/book_4.png").getdashboardCard();
+        JPanel card_1 = new dashboardCard_2("Số Lượng Sách", Integer.toString(tk.soLuong_Sach()), "../../../images/book_1.png").getdashboardCard();
+        JPanel card_2 = new dashboardCard_2("Thể Loại", Integer.toString(tk.soLuong_Sach_TheLoai()), "../../../images/book_2.png").getdashboardCard();
+        JPanel card_3 = new dashboardCard_2("Sách Việt Nam", Integer.toString(tk.soLuong_Sach_NgonNgu("Tiếng Việt")), "../../../images/book_3.png").getdashboardCard();
+        JPanel card_4 = new dashboardCard_2("Sách Nước Ngoài", Integer.toString(tk.soLuong_Sach_NgonNgu("Tiếng Anh")), "../../../images/book_4.png").getdashboardCard();
         card_1.setBounds(20, 40 - 10, 220, 184);
         card_2.setBounds(250, 40 - 10, 220, 184);
         card_3.setBounds(480, 40 - 10, 220, 184);

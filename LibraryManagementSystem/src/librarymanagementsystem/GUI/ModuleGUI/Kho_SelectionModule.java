@@ -1,7 +1,7 @@
 package librarymanagementsystem.GUI.ModuleGUI;
 
 import librarymanagementsystem.GUI.*;
-import librarymanagementsystem.GUI.HienThiGUI.*;
+import librarymanagementsystem.GUI.ElementsGUI.ChoiceGUI.*;
 import javax.swing.JPanel;
 
 public class Kho_SelectionModule{
@@ -20,14 +20,14 @@ public class Kho_SelectionModule{
         jPanel1.setOpaque(false);
         jPanel1.setLayout(null);
         
-        kho_Choice = new ChoiceElement("../../images/libraryAbbreviation.png", "QUẢN LÝ KHO SÁCH").getPanel();
+        kho_Choice = new ChoiceElement("../../../images/libraryAbbreviation.png", "QUẢN LÝ KHO SÁCH").getPanel();
         kho_Choice.setBounds(180, 100, 220, 177);
         kho_Choice.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 kho_ChoiceMouseClicked(evt);
             }
         });
-        phieuNhap_Choice = new ChoiceElement("../../images/goodsReceiptNote.png", "QUẢN LÝ PHIẾU NHẬP").getPanel();
+        phieuNhap_Choice = new ChoiceElement("../../../images/goodsReceiptNote.png", "QUẢN LÝ PHIẾU NHẬP").getPanel();
         phieuNhap_Choice.setBounds(530, 100, 220, 177);
         phieuNhap_Choice.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -35,7 +35,7 @@ public class Kho_SelectionModule{
             }
         });
         
-        phieuXuat_Choice = new ChoiceElement("../../images/outputDelivery.png", "QUẢN LÝ PHIẾU XUẤT").getPanel();
+        phieuXuat_Choice = new ChoiceElement("../../../images/outputDelivery.png", "QUẢN LÝ PHIẾU XUẤT").getPanel();
         phieuXuat_Choice.setBounds(180, 350, 220, 177);
         phieuXuat_Choice.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -43,7 +43,7 @@ public class Kho_SelectionModule{
             }
         });
         
-        nhaCungCap_Choice = new ChoiceElement("../../images/outputLibrary.png", "QUẢN LÝ NCC").getPanel();
+        nhaCungCap_Choice = new ChoiceElement("../../../images/outputLibrary.png", "QUẢN LÝ NCC").getPanel();
         nhaCungCap_Choice.setBounds(530, 350, 220, 177);
         nhaCungCap_Choice.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {

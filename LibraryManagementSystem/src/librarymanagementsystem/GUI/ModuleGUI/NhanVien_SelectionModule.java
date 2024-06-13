@@ -1,7 +1,7 @@
 package librarymanagementsystem.GUI.ModuleGUI;
 
 import librarymanagementsystem.GUI.*;
-import librarymanagementsystem.GUI.HienThiGUI.*;
+import librarymanagementsystem.GUI.ElementsGUI.ChoiceGUI.*;
 import javax.swing.JPanel;
 
 public class NhanVien_SelectionModule{
@@ -20,14 +20,14 @@ public class NhanVien_SelectionModule{
         jPanel1.setOpaque(false);
         jPanel1.setLayout(null);
         
-        nhanvien_Choice = new ChoiceElement("../../images/output-onlinepngtools - 2020-06-17T140634.287.png", "QUẢN LÝ NHÂN VIÊN").getPanel();
+        nhanvien_Choice = new ChoiceElement("../../../images/staff.png", "QUẢN LÝ NHÂN VIÊN").getPanel();
         nhanvien_Choice.setBounds(180, 100, 220, 177);
         nhanvien_Choice.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 nhanvien_ChoiceMouseClicked(evt);
             }
         });
-        quyen_Choice = new ChoiceElement("../../images/output-onlinepngtools - 2020-06-17T140640.532.png", "QUẢN LÝ QUYỀN").getPanel();
+        quyen_Choice = new ChoiceElement("../../../images/right.png", "QUẢN LÝ QUYỀN").getPanel();
         quyen_Choice.setBounds(530, 100, 220, 177);
         quyen_Choice.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -35,7 +35,7 @@ public class NhanVien_SelectionModule{
             }
         });
         
-        admin_Choice = new ChoiceElement("../../images/output-onlinepngtools - 2020-06-17T140649.682.png", "QUẢN LÝ ADMIN").getPanel();
+        admin_Choice = new ChoiceElement("../../../images/admin.png", "QUẢN LÝ ADMIN").getPanel();
         admin_Choice.setBounds(355, 350, 220, 177);
         admin_Choice.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {

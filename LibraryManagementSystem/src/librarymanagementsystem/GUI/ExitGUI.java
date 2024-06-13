@@ -68,7 +68,7 @@ public class ExitGUI extends javax.swing.JFrame{
 
         question_main.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         question_main.setText("Bạn muốn thoát chương trình ? ");
-        question_main.setBounds(123, 105, 231, 23);
+        question_main.setBounds(123, 105, 250, 23);
         jPanel1.add(question_main);
 
         dongy_btn.setBackground(new java.awt.Color(91, 231, 196));

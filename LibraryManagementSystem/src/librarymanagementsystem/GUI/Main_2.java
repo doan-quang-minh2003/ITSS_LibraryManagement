@@ -330,8 +330,8 @@ public class Main_2 extends javax.swing.JFrame {
         Module.setBounds(0, 0, 940, 600);
         Module_Panel.add(new ThongKeModule(0).createTabbedPane());
 
-        tittleModule.setIcon(new javax.swing.ImageIcon(getClass().getResource("../images/tilte5.png")));
-        thongKe_Module.setIcon(new javax.swing.ImageIcon(getClass().getResource("../images/statistical1.png")));
+        tittleModule.setIcon(new javax.swing.ImageIcon(getClass().getResource("../images/title5.png")));
+        thongKe_Module.setIcon(new javax.swing.ImageIcon(getClass().getResource("../images/statistical2.png")));
 
     }
 

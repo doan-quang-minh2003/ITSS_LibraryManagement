@@ -1,14 +1,12 @@
 package librarymanagementsystem.GUI.ModuleGUI;
 
-import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Arrays;
 import librarymanagementsystem.Toolkit.DataProcessing;
 import librarymanagementsystem.Toolkit.FileProcessing.*;
-import librarymanagementsystem.GUI.Table.*;
-import librarymanagementsystem.GUI.HienThiGUI.*;
-import librarymanagementsystem.GUI.ThanhPhanGUI.ComboCheckBox;
-import librarymanagementsystem.GUI.ThemSuaGUI.*;
+import librarymanagementsystem.GUI.ElementsGUI.TableGUI.*;
+import librarymanagementsystem.GUI.ElementsGUI.FilterGUI.FilterElement.ComboCheckBox;
+import librarymanagementsystem.GUI.ElementsGUI.FormGUI.*;
 import librarymanagementsystem.DTO.*;
 import librarymanagementsystem.BUS.*;
 import librarymanagementsystem.GUI.*;
@@ -91,7 +89,7 @@ public class LoaiSachModule {
         them_btn.setBounds(410, 30, 160, 78);
         jPanel1.add(them_btn);
 
-        nhapexcel_btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("../../images/importexcelbox.png\""))); // NOI18N
+        nhapexcel_btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("../../images/importexcelbox.png"))); // NOI18N
         nhapexcel_btn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 nhapexcel_btnMouseClicked(evt);

@@ -1,20 +1,17 @@
 package librarymanagementsystem.GUI.ModuleGUI;
 
-import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Arrays;
 import librarymanagementsystem.Toolkit.DataProcessing;
 import librarymanagementsystem.Toolkit.FileProcessing.*;
-import librarymanagementsystem.GUI.Table.*;
-import librarymanagementsystem.GUI.HienThiGUI.*;
+import librarymanagementsystem.GUI.ElementsGUI.TableGUI.*;
 import librarymanagementsystem.DTO.*;
 import librarymanagementsystem.BUS.*;
 import librarymanagementsystem.GUI.*;
 
 import javax.swing.JPanel;
-import librarymanagementsystem.GUI.ThanhPhanGUI.ComboCheckBox;
-import librarymanagementsystem.GUI.ThemSuaGUI.ThemLoaiSachForm;
-import librarymanagementsystem.GUI.ThemSuaGUI.ThemNhanVienForm;
+import librarymanagementsystem.GUI.ElementsGUI.FilterGUI.FilterElement.ComboCheckBox;
+import librarymanagementsystem.GUI.ElementsGUI.FormGUI.ThemNhanVienForm;
 
 public class NhanVienModule {
     private static QLNhanVienBUS nhanVienBUS = new QLNhanVienBUS();
@@ -73,11 +70,11 @@ public class NhanVienModule {
         
         jPanel1.add(searchtextfield);
 
-        search_bar.setIcon(new javax.swing.ImageIcon(getClass().getResource("../../images/output-onlinepngtools - 2020-05-28T185554.332.png"))); // NOI18N
+        search_bar.setIcon(new javax.swing.ImageIcon(getClass().getResource("../../images/searchbox.png"))); // NOI18N
         search_bar.setBounds(40, 55, 320, 46);
         jPanel1.add(search_bar);
 
-        them_btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("../../images/output-onlinepngtools - 2020-05-28T203841.556.png"))); // NOI18N
+        them_btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("../../images/addbox.png"))); // NOI18N
         them_btn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 them_btnMouseClicked(evt);
@@ -86,7 +83,7 @@ public class NhanVienModule {
         them_btn.setBounds(410, 30, 160, 78);
         jPanel1.add(them_btn);
 
-        nhapexcel_btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("../../images/output-onlinepngtools - 2020-05-28T203937.073.png"))); // NOI18N
+        nhapexcel_btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("../../images/importexcelbox.png"))); // NOI18N
         nhapexcel_btn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 nhapexcel_btnMouseClicked(evt);
@@ -96,7 +93,7 @@ public class NhanVienModule {
         
         jPanel1.add(nhapexcel_btn);
 
-        xuatexcel_btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("../../images/output-onlinepngtools - 2020-05-28T203932.633.png"))); // NOI18N
+        xuatexcel_btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("../../images/exportexcelbox.png"))); // NOI18N
         xuatexcel_btn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 xuatexcel_btnMouseClicked(evt);
@@ -105,7 +102,7 @@ public class NhanVienModule {
         jPanel1.add(xuatexcel_btn);
         
         /** add Expand and Refresh btn **/
-        expand_btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("../../images/output-onlinepngtools - 2020-06-10T234019.664.png"))); // NOI18N
+        expand_btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("../../images/zoomout.png"))); // NOI18N
         expand_btn.setBounds(45, 115, 34, 34);
         expand_btn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -114,7 +111,7 @@ public class NhanVienModule {
         });
         jPanel1.add(expand_btn);
         
-        refresh_btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("../../images/output-onlinepngtools - 2020-06-10T234012.187.png"))); // NOI18N
+        refresh_btn.setIcon(new javax.swing.ImageIcon(getClass().getResource("../../images/reload.png"))); // NOI18N
         refresh_btn.setBounds(89, 115, 34, 34);
         refresh_btn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {

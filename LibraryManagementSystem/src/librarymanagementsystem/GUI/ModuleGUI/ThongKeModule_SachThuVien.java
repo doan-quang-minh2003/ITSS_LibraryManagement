@@ -6,8 +6,8 @@ import javax.swing.JPanel;
 import javax.swing.JScrollBar;
 import librarymanagementsystem.BUS.QLChiTietSachBUS;
 import librarymanagementsystem.BUS.QLLoaiSachBUS;
-import librarymanagementsystem.GUI.ChartDrawing;
-import librarymanagementsystem.GUI.HienThiGUI.dashboardCard_2;
+import librarymanagementsystem.GUI.ElementsGUI.ChartDrawing;
+import librarymanagementsystem.GUI.ElementsGUI.ChoiceGUI.dashboardCard_2;
 import librarymanagementsystem.Toolkit.DataProcessing;
 import librarymanagementsystem.Toolkit.ThongKe;
 
@@ -20,10 +20,10 @@ public class ThongKeModule_SachThuVien {
         initComponents();
         new QLLoaiSachBUS();
         new QLChiTietSachBUS();
-        JPanel card_1 = new dashboardCard_2("Số Lượng Sách", Integer.toString(tk.soLuong_SachThuVien()), "../../images/book_1.png").getdashboardCard();
-        JPanel card_2 = new dashboardCard_2("Tình Trạng Tốt", Integer.toString(tk.soLuong_SachThuVien_TinhTrang("Tốt")), "../../images/book_2.png").getdashboardCard();
-        JPanel card_3 = new dashboardCard_2("Tình Trạng Ổn", Integer.toString(tk.soLuong_SachThuVien_TinhTrang("Bình Thường")), "../../images/book_3.png").getdashboardCard();
-        JPanel card_4 = new dashboardCard_2("Tình Trạng Cũ", Integer.toString(tk.soLuong_SachThuVien_TinhTrang("Cũ")), "../../images/book_4.png").getdashboardCard();
+        JPanel card_1 = new dashboardCard_2("Số Lượng Sách", Integer.toString(tk.soLuong_SachThuVien()), "../../../images/book_1.png").getdashboardCard();
+        JPanel card_2 = new dashboardCard_2("Tình Trạng Tốt", Integer.toString(tk.soLuong_SachThuVien_TinhTrang("Tốt")), "../../../images/book_2.png").getdashboardCard();
+        JPanel card_3 = new dashboardCard_2("Tình Trạng Ổn", Integer.toString(tk.soLuong_SachThuVien_TinhTrang("Bình Thường")), "../../../images/book_3.png").getdashboardCard();
+        JPanel card_4 = new dashboardCard_2("Tình Trạng Cũ", Integer.toString(tk.soLuong_SachThuVien_TinhTrang("Cũ")), "../../../images/book_4.png").getdashboardCard();
         card_1.setBounds(20, 40 - 10, 220, 184);
         card_2.setBounds(250, 40 - 10, 220, 184);
         card_3.setBounds(480, 40 - 10, 220, 184);

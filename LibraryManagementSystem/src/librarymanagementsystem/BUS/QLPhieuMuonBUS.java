@@ -222,14 +222,16 @@ public class QLPhieuMuonBUS {
     public int getSoLuongSachMuon(){
         int res = 0;
         for (QLPhieuMuonDTO e : arrMuonTra){
+            if (e.getIDSach() != null)
             res += e.getIDSach().size();
         }
-        System.out.println(""+arrMuonTra.size());
+        // System.out.println(""+arrMuonTra.size());
         return res;
     }
     
     public int getSoLuongSachMuon(int year){
         int res = 0;
+        arrMuonTra = muonTraDAO.readDB();
         DataProcessing ps = new DataProcessing();
         for (QLPhieuMuonDTO e : arrMuonTra){
             if (ps.getYear(e.getNgayMuon()) == year){
@@ -330,7 +332,7 @@ public class QLPhieuMuonBUS {
         for (int month = 1; month <= current_month; month++){
             int t = 0;
             for (QLPhieuMuonDTO e : arrMuonTra){
-                if (ps.getYear(e.getNgayMuon()) == current_year && ps.getMonth(e.getNgayMuon()) == month){
+                if (ps.getYear(e.getNgayMuon()) == 2020 && ps.getMonth(e.getNgayMuon()) == month){
                     t += e.getIDSach().size();
                 }
             }

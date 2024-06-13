@@ -2,10 +2,11 @@ package librarymanagementsystem.GUI.ModuleGUI;
 
 import java.awt.Color;
 import java.util.ArrayList;
+
+import librarymanagementsystem.GUI.ElementsGUI.ChartDrawing;
 import librarymanagementsystem.Toolkit.DataProcessing;
-import librarymanagementsystem.GUI.HienThiGUI.*;
+import librarymanagementsystem.GUI.ElementsGUI.ChoiceGUI.*;
 import librarymanagementsystem.BUS.*;
-import librarymanagementsystem.GUI.*;
 
 import javax.swing.JPanel;
 
@@ -27,10 +28,10 @@ public class TrangChuGUI extends javax.swing.JFrame {
         int value_3 = phieuMuonBUS.getSoLuongSachMuon();
         int value_4 = nhanVienBUS.getSoLuongNhanVien();
         
-        JPanel card_1 = new dashboardCard("SÁCH", Integer.toString(value_1), "../../images/book.png").getdashboardCard();
-        JPanel card_2 = new dashboardCard("THẺ", Integer.toString(value_2), "../../images/card.png").getdashboardCard();
-        JPanel card_3 = new dashboardCard("MƯỢN SÁCH", Integer.toString(value_3), "../../images/doc.png").getdashboardCard();
-        JPanel card_4 = new dashboardCard("NHÂN VIÊN", Integer.toString(value_4), "../../images/user.png").getdashboardCard();
+        JPanel card_1 = new dashboardCard("SÁCH", Integer.toString(value_1), "../../../images/book.png").getdashboardCard();
+        JPanel card_2 = new dashboardCard("THẺ", Integer.toString(value_2), "../../../images/card.png").getdashboardCard();
+        JPanel card_3 = new dashboardCard("MƯỢN SÁCH", Integer.toString(value_3), "../../../images/doc.png").getdashboardCard();
+        JPanel card_4 = new dashboardCard("NHÂN VIÊN", Integer.toString(value_4), "../../../images/user.png").getdashboardCard();
         card_1.setBounds(20, 50, 220, 134);
         card_2.setBounds(250, 50, 220, 134);
         card_3.setBounds(480, 50, 220, 134);
