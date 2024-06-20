@@ -149,14 +149,7 @@ public class Main_2 extends javax.swing.JFrame {
         the_Module.setBounds(66, 310, 32, 32);
         jPanel1.add(the_Module);
 
-        nhanVien_Module.setIcon(new javax.swing.ImageIcon(getClass().getResource("../images/staff1.png"))); // NOI18N
-        nhanVien_Module.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                nhanVien_ModuleMouseClicked(evt);
-            }
-        });
-        nhanVien_Module.setBounds(66, 390, 32, 32);
-        jPanel1.add(nhanVien_Module);
+
 
         kho_Module.setIcon(new javax.swing.ImageIcon(getClass().getResource("../images/storage1.png"))); // NOI18N
         kho_Module.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -164,7 +157,7 @@ public class Main_2 extends javax.swing.JFrame {
                 kho_ModuleMouseClicked(evt);
             }
         });
-        kho_Module.setBounds(66, 470, 32, 32);
+        kho_Module.setBounds(66, 390, 32, 32);
         jPanel1.add(kho_Module);
 
         thongKe_Module.setIcon(new javax.swing.ImageIcon(getClass().getResource("../images/statistical1.png"))); // NOI18N
@@ -173,8 +166,18 @@ public class Main_2 extends javax.swing.JFrame {
                 thongKe_ModuleMouseClicked(evt);
             }
         });
-        thongKe_Module.setBounds(66, 550, 32, 32);
+        thongKe_Module.setBounds(66,470 , 32, 32);
         jPanel1.add(thongKe_Module);
+
+        if (currentUser.equals("AD000001")) {
+        nhanVien_Module.setIcon(new javax.swing.ImageIcon(getClass().getResource("../images/staff1.png"))); // NOI18N
+        nhanVien_Module.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                nhanVien_ModuleMouseClicked(evt);
+            }
+        });
+        nhanVien_Module.setBounds(66,550 , 32, 32);
+        jPanel1.add(nhanVien_Module);}
 
         info_Module.setIcon(new javax.swing.ImageIcon(getClass().getResource("../images/info1.png"))); // NOI18N
         info_Module.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -196,7 +199,6 @@ public class Main_2 extends javax.swing.JFrame {
     }// </editor-fold>                        
 
     private void exit_btnMouseClicked(java.awt.event.MouseEvent evt) {
-        //System.exit(0);
         if (exitForm == null || !exitForm.isDisplayable()) {
             exitForm = new ExitGUI();
             exitForm.setVisible(true);
@@ -298,7 +300,7 @@ public class Main_2 extends javax.swing.JFrame {
         Module.setBounds(0, 0, 940, 600);
         Module_Panel.add(Module);
 
-        tittleModule.setIcon(new javax.swing.ImageIcon(getClass().getResource("../images/title4.png")));
+        tittleModule.setIcon(new javax.swing.ImageIcon(getClass().getResource("../images/title9.png")));
         nhanVien_Module.setIcon(new javax.swing.ImageIcon(getClass().getResource("../images/staff2.png")));
 
     }
